@@ -1,0 +1,61 @@
+<script>
+  document.getElementById("message").innerText = "Hello Uzair!";
+</script>
+
+<div id="box" style="width:100px; height:100px; background:lightblue;"></div>
+
+<script>
+  document.getElementById("box").style.background = "orange";
+</script>
+
+<ul id="myList">
+  <li>Apple</li>
+  <li>Banana</li>
+</ul>
+
+<script>
+  const newItem = document.createElement("li");
+  newItem.innerText = "Cherry";
+  document.getElementById("myList").appendChild(newItem);
+</script>
+
+<p id="note">This is a note.</p>
+<button onclick="document.getElementById('note').style.display='none'">Hide</button>
+<button onclick="document.getElementById('note').style.display='block'">Show</button>
+
+
+<button id="myBtn">Click Me</button>
+<p id="msg">Hello!</p>
+
+<script>
+  const btn = document.getElementById("myBtn");
+  const msg = document.getElementById("msg");
+
+  btn.addEventListener("click", function() {
+    msg.innerText = "Button was clicked!";
+  });
+</script>
+
+<div id="box" style="width:100px; height:100px; background:lightblue;"></div>
+
+<script>
+  const box = document.getElementById("box");
+
+  box.addEventListener("mouseover", function() {
+    box.style.background = "orange";
+  });
+
+  box.addEventListener("mouseout", function() {
+    box.style.background = "lightblue";
+  });
+</script>
+
+<p id="keyInfo">Press any key...</p>
+
+<script>
+  const keyInfo = document.getElementById("keyInfo");
+
+  document.addEventListener("keydown", function(event) {
+    keyInfo.innerText = "You pressed: " + event.key;
+  });
+</script>
